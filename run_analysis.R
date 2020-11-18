@@ -112,3 +112,10 @@ subject_combo2_df <- Xy_combo2_df_mean$subject
 write_txt(X_combo2_df, fn_combo2_X)
 write_txt(y_combo2_df, fn_combo2_y)
 write_txt(subject_combo2_df, fn_combo2_subject)
+
+# write a data.frame to txt file
+write_txt_col_name <- function(data, fname){
+  write.table(data, fname, append = FALSE, sep = " ", dec = ".",
+              row.names = FALSE, col.names = TRUE)
+}
+write_txt_col_name(Xy_combo2_df_mean, "UCI_HAR_Dataset/combo2/Xy_combo2.txt" )
