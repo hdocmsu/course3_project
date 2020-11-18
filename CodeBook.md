@@ -1,14 +1,21 @@
 # course3_project - Code Book
 
-First, clone the repo 
+* First, clone the repo 
 
 git clone https://github.com/hdocmsu/course3_project.git
 
-Second, rund the script "run_analysis.R"
+* Second, rund the script "run_analysis.R"
 
-combined data set is stored at "./UCI_HAR_Dataset/combo/"
+* combined data set is stored at "./UCI_HAR_Dataset/combo/"
 
-tidy data set is stored at "./UCI_HAR_Dataset/combos/"
+* tidy data set is stored at "./UCI_HAR_Dataset/combos/"
+
+
+## Below are few transformation are applied to clean and prepare data set
+
+* for the merge data set, rbind() is used to concatinate train and test data into a single combined data set
+
+* for the tidy dataset, the average of each variable for each activity and each subject was caculcated using a special method for Data.Table, which is .SD symbol. SD stands for Subset Data. 
 
 
 ## Below are list of 561 features:
